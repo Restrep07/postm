@@ -1,0 +1,1568 @@
+{
+	"info": {
+		"_postman_id": "bb1d5c41-dc0d-40e6-bdb3-7814621d007b",
+		"name": "BackEnd-rutaamigapp",
+		"description": "Documentacion Pruebas de registro usuario, login usuario y recuperacion de contraseña.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Listar Usuario por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTY3ODM5Mzk1MywiZXhwIjoxNjc4NDA4MzUzfQ.rdjEk_4AgwjGb47ywaiNpNSml_1XpSlWscuECqjRHj4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlltestlocal}}/usuario/4",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"usuario",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar Usuario por id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTY3ODM5Mzk1MywiZXhwIjoxNjc4NDA4MzUzfQ.rdjEk_4AgwjGb47ywaiNpNSml_1XpSlWscuECqjRHj4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/usuario/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"usuario",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "306"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"132-4hdzzhvbzjAxXFqcqMG53eAcMmM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:30:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": 4,\n    \"user_name\": \"CamiloHernandez\",\n    \"user_lastname\": \"Hernandez\",\n    \"user_email\": \"camilo110@gmail.com\",\n    \"user_password\": \"$2b$10$RPOWasWIdVQYktRlRoGo.OBXoykXHLDhO9JHmrwuLHLzxcD4.74cG\",\n    \"user_status\": true,\n    \"create_date\": \"2023-03-09T21:54:51.696Z\",\n    \"update_date\": \"2023-03-09T21:54:51.696Z\",\n    \"removal_date\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Listar todos los  usuarios con token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTY3ODQyMjQ1MiwiZXhwIjoxNjc4NDM2ODUyfQ.VVfZtzcBoPblXJUQqLPJnj1KZzou6mP8HN6p672t-NU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlltestlocal}}/usuario/allusers",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"usuario",
+								"allusers"
+							]
+						},
+						"description": "Ruta para realizar peticion al back y obtener la lista de usuarios registrados pasando el token del usuario logueado."
+					},
+					"response": [
+						{
+							"name": "Listar todos los  usuarios con token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTY3ODQyMjQ1MiwiZXhwIjoxNjc4NDM2ODUyfQ.VVfZtzcBoPblXJUQqLPJnj1KZzou6mP8HN6p672t-NU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urlltestlocal}}/usuario/allusers?limit=2&skip=1",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"usuario",
+										"allusers"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "2"
+										},
+										{
+											"key": "skip",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "665"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"299-1McjjnT8pY8Aae4KjhwWMpwiZ4k\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:47:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"usuario\": [\n        {\n            \"user_id\": 3,\n            \"user_name\": \"CamiloHernandez\",\n            \"user_lastname\": \"Hernandez\",\n            \"user_email\": \"camilo110@gmail.com\",\n            \"user_password\": \"$2b$10$sHQjKYn4UyqlM/dz57Nbqe3/Cm4ltezqnrwRG3kax6t7InUTjDRzm\",\n            \"user_status\": true,\n            \"create_date\": \"2023-03-09T21:54:24.177Z\",\n            \"update_date\": \"2023-03-09T21:54:24.177Z\",\n            \"removal_date\": null\n        },\n        {\n            \"user_id\": 4,\n            \"user_name\": \"CamiloHernandez\",\n            \"user_lastname\": \"Hernandez\",\n            \"user_email\": \"camilo110@gmail.com\",\n            \"user_password\": \"$2b$10$RPOWasWIdVQYktRlRoGo.OBXoykXHLDhO9JHmrwuLHLzxcD4.74cG\",\n            \"user_status\": true,\n            \"create_date\": \"2023-03-09T21:54:51.696Z\",\n            \"update_date\": \"2023-03-09T21:54:51.696Z\",\n            \"removal_date\": null\n        }\n    ],\n    \"totalUsers\": 2,\n    \"page\": \"1\",\n    \"limit\": \"2\"\n}"
+						},
+						{
+							"name": "Listar todos los  usuarios con token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTY3ODQyMjQ1MiwiZXhwIjoxNjc4NDM2ODUyfQ.VVfZtzcBoPblXJUQqLPJnj1KZzou6mP8HN6p672t-NU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urlltestlocal}}/usuario/",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"usuario",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1246"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4de-uK5B1NuX57X7KuKeov6PTAYQodA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:48:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"usuario\": [\n        {\n            \"user_id\": 1,\n            \"user_name\": \"Camiloandres\",\n            \"user_lastname\": \"Hernandez\",\n            \"user_email\": \"camilo110@gmail.com\",\n            \"user_password\": \"$2b$10$BBBwxQH89HDow9ppgixZVe0cQRADwqBkXIDpMCnB74OHStARLwp/.\",\n            \"user_status\": true,\n            \"create_date\": null,\n            \"update_date\": \"2023-03-10T04:38:41.000Z\",\n            \"removal_date\": null\n        },\n        {\n            \"user_id\": 3,\n            \"user_name\": \"CamiloHernandez\",\n            \"user_lastname\": \"Hernandez\",\n            \"user_email\": \"camilo110@gmail.com\",\n            \"user_password\": \"$2b$10$sHQjKYn4UyqlM/dz57Nbqe3/Cm4ltezqnrwRG3kax6t7InUTjDRzm\",\n            \"user_status\": true,\n            \"create_date\": \"2023-03-09T21:54:24.177Z\",\n            \"update_date\": \"2023-03-09T21:54:24.177Z\",\n            \"removal_date\": null\n        },\n        {\n            \"user_id\": 4,\n            \"user_name\": \"CamiloHernandez\",\n            \"user_lastname\": \"Hernandez\",\n            \"user_email\": \"camilo110@gmail.com\",\n            \"user_password\": \"$2b$10$RPOWasWIdVQYktRlRoGo.OBXoykXHLDhO9JHmrwuLHLzxcD4.74cG\",\n            \"user_status\": true,\n            \"create_date\": \"2023-03-09T21:54:51.696Z\",\n            \"update_date\": \"2023-03-09T21:54:51.696Z\",\n            \"removal_date\": null\n        },\n        {\n            \"user_id\": 7,\n            \"user_name\": \"Cristian\",\n            \"user_lastname\": \"Hernandez\",\n            \"user_email\": \"cristian110@gmail.com\",\n            \"user_password\": \"$2b$10$743k7eT4tic7GkPQjgoCtO7lFu7WD2yhbspCTo49pEpgxG/ZLVJBO\",\n            \"user_status\": true,\n            \"create_date\": \"2023-03-10T04:41:13.049Z\",\n            \"update_date\": \"2023-03-10T04:41:13.049Z\",\n            \"removal_date\": null\n        }\n    ],\n    \"totalUsers\": 4,\n    \"page\": 0,\n    \"limit\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "Ruta registro Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{            \r\n    \"user_name\": \"Cristian\",\r\n    \"user_lastname\": \"Hernandez\",\r\n    \"user_email\": \"cristian110@gmail.com\",\r\n    \"user_password\": \"A123bb9%\",\r\n    \"user_status\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlltestlocal}}/usuario/registro",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"usuario",
+								"registro"
+							]
+						},
+						"description": "Ruta para hacer test del registro usuario,se envia tipo post formato 'json' con toda la informacion del usuario."
+					},
+					"response": [
+						{
+							"name": "Ruta registro Usuario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{            \r\n    \"user_name\": \"Cristian\",\r\n    \"user_lastname\": \"Hernandez\",\r\n    \"user_email\": \"cristian110@gmail.com\",\r\n    \"user_password\": \"A123bb9%\",\r\n    \"user_status\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlltestlocal}}/usuario/registro",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"usuario",
+										"registro"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "348"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15c-mJ8vif6gPGMsSgJPgnLybWYRGyI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:41:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Usuario guardado con exito\",\n    \"user\": {\n        \"user_name\": \"Cristian\",\n        \"user_lastname\": \"Hernandez\",\n        \"user_email\": \"cristian110@gmail.com\",\n        \"user_password\": \"$2b$10$743k7eT4tic7GkPQjgoCtO7lFu7WD2yhbspCTo49pEpgxG/ZLVJBO\",\n        \"removal_date\": null,\n        \"user_id\": 7,\n        \"user_status\": true,\n        \"create_date\": \"2023-03-10T04:41:13.049Z\",\n        \"update_date\": \"2023-03-10T04:41:13.049Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar usuario por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlltestlocal}}/usuario/5",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"usuario",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar usuario por id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{urlltestlocal}}/usuario/5",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"usuario",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-emwqIM+LqMsQd/7uCVzFH9KlC3A\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:40:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Usuario eliminado con exito\",\n    \"result\": {\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update usuario por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{            \r\n    \"user_name\": \"CtContreras\",\r\n    \"user_lastname\": \"Hernandez\",\r\n    \"user_email\": \"camilo110@gmail.com\",\r\n    \"user_password\": \"A123bb9%\",\r\n    \"user_status\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlltestlocal}}/usuario/7",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"usuario",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update usuario por id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{            \r\n    \"user_name\": \"CamiloContreras\",\r\n    \"user_lastname\": \"Hernandez\",\r\n    \"user_email\": \"camilo110@gmail.com\",\r\n    \"user_password\": \"A123bb9%\",\r\n    \"user_status\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlltestlocal}}/usuario/6",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"usuario",
+										"6"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-NVRJXAQoupzdVZpuy5/ZxksSLeg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:39:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Usuario actualizado con exito\",\n    \"user\": {\n        \"generatedMaps\": [],\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Listar Comentarios Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlltestlocal}}/usuario/7/comentarios",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"usuario",
+								"7",
+								"comentarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Ruta Login backend",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"user_email\": \"camilo110@gmail.com\",\r\n        \"user_password\": \"A123bb9%\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlltestlocal}}/auth/login",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Ruta para hacer test del login,se envia el correo y el password del usuario ya registrado."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comentarios",
+			"item": [
+				{
+					"name": "Guardar Comentarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date_comment\":\"12-12-23\",\r\n    \"time_comment\":\"00-00-00\",\r\n    \"content_comment\":\"Hola mundo\",\r\n    \"userUserId\":\"7\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlltestlocal}}/comentario/save",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"comentario",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Guardar Comentarios",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date_comment\":\"12-12-23\",\r\n    \"time_comment\":\"00-00-00\",\r\n    \"content_comment\":\"Hola mundo\",\r\n    \"userUserId\":\"7\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlltestlocal}}/comentario/save",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"comentario",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-pRSAUC0puInAzXVCFshO9RLsmjM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:00:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Comentario guardado con exito\",\n    \"results\": {\n        \"date_comment\": \"12-12-23\",\n        \"time_comment\": \"00-00-00\",\n        \"content_comment\": \"Hola mundo\",\n        \"comment_id\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar comentarios",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlltestlocal}}/comentario/2",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"comentario",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar comentarios",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{urlltestlocal}}/comentario/2",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"comentario",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-1BDPZYIjIQ5reVNWAwH0eVe/cKU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:05:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Comentario eliminado con exito\",\n    \"results\": {\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Listar todos los Comentarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlltestlocal}}/comentario",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"comentario"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar todos los Comentarios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urlltestlocal}}/comentario",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"comentario"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"68-wSThuNcc8vcOt1xyiB4YfccFxYo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:16:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"comment_id\": 3,\n        \"date_comment\": \"2012-12-23\",\n        \"time_comment\": \"00:00:00\",\n        \"content_comment\": \"Hola mundo4\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Actualizar comentario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date_comment\":\"12-12-23\",\r\n    \"time_comment\":\"00-00-00\",\r\n    \"content_comment\":\"Hola mundo4\",\r\n    \"userUserId\":\"7\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlltestlocal}}/comentario/3",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"comentario",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Actualizar comentario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date_comment\":\"12-12-23\",\r\n    \"time_comment\":\"00-00-00\",\r\n    \"content_comment\":\"Hola mundo4\",\r\n    \"userUserId\":\"7\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlltestlocal}}/comentario/3",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"comentario",
+										"3"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "98"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"62-s1op3+YZ0FSyAjJbdQMhX6YWDYY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:12:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Comentario actualizado con exito\",\n    \"results\": {\n        \"generatedMaps\": [],\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "LIstar comentario por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlltestlocal}}/comentario/3",
+							"host": [
+								"{{urlltestlocal}}"
+							],
+							"path": [
+								"comentario",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "LIstar comentario por id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urlltestlocal}}/comentario/3",
+									"host": [
+										"{{urlltestlocal}}"
+									],
+									"path": [
+										"comentario",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"66-b7HPI+MF4FUc9GOymUChzXYB7ww\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:26:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"comment_id\": 3,\n    \"date_comment\": \"2012-12-23\",\n    \"time_comment\": \"00:00:00\",\n    \"content_comment\": \"Hola mundo4\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rutas",
+			"item": [
+				{
+					"name": "Listar Ruta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/Ruta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Ruta"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar Ruta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Ruta",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Ruta"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Creacion de ruta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"idRutas\":1,\r\n\"nombre\":\"Ruta 15\",\r\n\"descripcion\":\"centro,los quindos,\" ,\r\n\"sentido\":\"sur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/Ruta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Ruta"
+							]
+						},
+						"description": "Creacion de rutas"
+					},
+					"response": [
+						{
+							"name": "Creacion de ruta",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"idRutas\":1,\r\n\"nombre\":\"Ruta 15\",\r\n\"descripcion\":\"centro,los quindos,\" ,\r\n\"sentido\":\"sur\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/Ruta",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Ruta"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": \"Ruta guardadad\",\n    \"results\": {\n        \"idRutas\": 1,\n        \"nombre\": \"Ruta 15\",\n        \"descripcion\": \"centro,los quindos,\",\n        \"sentido\": \"sur\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Se lista todas las rutas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/Ruta/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Ruta",
+								""
+							]
+						},
+						"description": "se listan las rutas que hay"
+					},
+					"response": [
+						{
+							"name": "Se lista todas las rutas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Ruta/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Ruta",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "[\n    {\n        \"idRutas\": 1,\n        \"nombre\": \"Ruta 15\",\n        \"descripcion\": \"centro,los quindos,\",\n        \"sentido\": \"sur\"\n    },\n    {\n        \"idRutas\": 2,\n        \"nombre\": \"Ruta 35\",\n        \"descripcion\": \"centro,el bosque,la patria\",\n        \"sentido\": \"sur occidente\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Eliminación de una ruta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/Ruta/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Ruta",
+								"2"
+							]
+						},
+						"description": "se elimina esta ruta para poder hacer ejemplo del delete"
+					},
+					"response": [
+						{
+							"name": "Eliminación de una ruta",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Ruta/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Ruta",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"raw\": [],\r\n    \"affected\": 1\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Modificación de Rutas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idRutas\": 3,\r\n        \"nombre\": \"Ruta 4\",\r\n        \"descripcion\": \"centro,villa liliana, villa andrea, san jose\",\r\n        \"sentido\": \"sur\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/Ruta/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Ruta",
+								"3"
+							]
+						},
+						"description": "se modificaron el destino de ruta "
+					},
+					"response": [
+						{
+							"name": "Modificación de Rutas",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idRutas\": 3,\r\n        \"nombre\": \"Ruta 4\",\r\n        \"descripcion\": \"centro,villa liliana, villa andrea, san jose\",\r\n        \"sentido\": \"sur\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/Ruta/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Ruta",
+										"3"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n        \"idRutas\": 3,\n        \"nombre\": \"Ruta 4\",\n        \"descripcion\": \"centro,villa liliana, villa andrea, san jose\",\n        \"sentido\": \"sur\"\n    }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Forum",
+			"item": [
+				{
+					"name": "Creación de Foro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idForo\":2,\r\n    \"estado\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/Foro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Foro"
+							]
+						},
+						"description": "se crea un foro nuevo"
+					},
+					"response": [
+						{
+							"name": "Creación de Foro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idForo\":2,\r\n    \"estado\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/Foro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Foro"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"idForo\": 2,\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Listar todos los id Foro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/Foro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Foro"
+							]
+						},
+						"description": "se listan todos los id del foro"
+					},
+					"response": [
+						{
+							"name": "Listar todos los id Foro",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Foro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Foro"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "[{\r\n        \"idForo\": 1,\r\n        \"estado\": 1\r\n    },\r\n    {\r\n        \"idForo\": 2,\r\n        \"estado\": 1\r\n    }]"
+						}
+					]
+				},
+				{
+					"name": "Listar por id ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/Foro/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Foro",
+								"1"
+							]
+						},
+						"description": "se lista por id el foro"
+					},
+					"response": [
+						{
+							"name": "Listar por id ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Foro/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Foro",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"idForo\": 1,\r\n    \"estado\": 1\r\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/api/Foro/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idForo\": 1,\r\n        \"estado\": true\r\n        }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/Foro/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Foro",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:3000/api/Foro/1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idForo\": 1,\r\n        \"estado\": true\r\n        }\r\n    ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/Foro/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Foro",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/api/Foro/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/Foro/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"Foro",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:3000/api/Foro/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Foro/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Foro",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlbase",
+			"value": "http://localhost:3000/api"
+		},
+		{
+			"key": "accesstoken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJqZXNzaWNhQGJlcnJpby5jb20iLCJuYmYiOjE2NzAwMzIzODEsImV4cCI6MTY3MDAzMjY4MSwiaWF0IjoxNjcwMDMyMzgxfQ.3h0tUglsBEhY6sMqTnVAGXzntiyARFptVhHPueibFt0"
+		},
+		{
+			"key": "urlltestlocal",
+			"value": "http://localhost:3000/api"
+		}
+	]
+}
